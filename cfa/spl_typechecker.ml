@@ -231,6 +231,7 @@ let check_syntax_tree fs =
                 |None -> terr (sprintf "Unknown struct '%s'" id)
                 |Some a -> ()
             end
+            |Assign ((id, Some fl), Function _) -> ()
             |Assign _ -> terr "Assignments can only be to statecalls"
             |Function_call (fname, args) -> ()
             ) xsl in

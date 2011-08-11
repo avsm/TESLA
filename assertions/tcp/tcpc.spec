@@ -16,4 +16,4 @@ field_assign,tp,t_state,TCPS_SYN_SENT
 function,tcp_free
 field_assign,tp,t_state,TCPS_CLOSED
 field_assign,tp,t_state,TCPS_LISTEN
-field_assign,tp,t_state,TCPS_CLOSED
+field_assign,tp,t_state,tcp_init

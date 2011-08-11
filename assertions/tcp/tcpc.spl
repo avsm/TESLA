@@ -28,7 +28,7 @@ automaton tcp_connect()
   };
   
   void main(struct tcpcb *tp) {
-    tp->t_state = TCPS_CLOSED;
+    tp->t_state = tcp_init();
     either {
       tp->t_state = TCPS_LISTEN;
       optional { tp->t_state = TCPS_CLOSED; }

@@ -166,6 +166,7 @@ expr:
 | INT { Spl_syntaxtree.Int_constant (id $1) }
 | IDENTIFIER {Spl_syntaxtree.Identifier (id $1)}
 | IDENTIFIER FIELD IDENTIFIER { Spl_syntaxtree.Struct (id $1, id $3) }
+| IDENTIFIER LBRACKET RBRACKET { Spl_syntaxtree.Statecall (id $1) }
 | LBRACKET expr RBRACKET { $2 }
 | STATECALL { Spl_syntaxtree.Statecall (id $1) }
 | expr PLUS expr { Spl_syntaxtree.Plus ($1, $3) }

@@ -27,6 +27,7 @@ type expr =
     | Or of (expr * expr)
     | Identifier of id
     | Struct of id * id
+    | Function of id
     | Statecall of id
     | Not of expr
     | True
